@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Design</title>
+  <style>
+    /* Reset css */
+    *{margin:0;border:none;padding:0;font-size:14px;box-sizing:border-box;}
+    a{text-decoration:none;color:black;}
+    img{vertical-align:top;}
+    ul,ol,li{list-style:none;}
+    .clearfix::after{content:'';display:block;clear:both;}
+
+    /* 기본 스타일     */
+    /* 모바일 스타일 */
+    .wrap{
+      /* width:320px; */
+      /* 320/384*100=83.33333333333333 */
+      width:83.33333333333333%;
+      min-width:320px;
+      max-width:1200px;
+      margin:0 auto;
+      background:rgba(255,0,0,0.2);
+    }
+    .header{
+      height:147px;
+      background:rgba(0,255,0,0.2);
+    }
+    .section{
+      height:1200px;
+      background:rgba(0,0,255,0.2);
+    }
+    .footer{
+      height:67px;
+      background:rgba(0,255,255,0.2);
+    }
+
+
+
+
+
+
+
+
+    /* 테블릿 스타일 */
+    @media (min-width:640px){
+      .wrap{
+        width:80%;
+      }
+      .header{
+        height:131px;
+      }
+      .section{
+        height:800px;
+      }
+      .footer{
+        height:91px;
+      }
+
+    }
+
+
+
+
+
+
+
+    /* 피씨 스타일 */
+    @media (min-width:1024px){
+      .header{
+        height:80px;
+      }
+      .section{
+        height:600px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">header</header>
+    <section class="section">section</section>
+    <footer class="footer">footer</footer>
+  </div>
+</body>
+</html>
