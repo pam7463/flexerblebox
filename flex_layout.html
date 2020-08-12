@@ -30,7 +30,14 @@
     .header{
       height:147px;
       background:rgba(0,255,0,0.2);
+      display:flex;
+      flex-flow:column nowrap;
+      justify-content:space-around;
     }
+    .header>h1.logo{order:2;}
+    .header>nav.nav{order:3;}
+    .header>ul.quick_nav{order:1;}
+    .header>ul#tgl_btn{order:4;}
     .section{
       height:1200px;
       background:rgba(0,0,255,0.2);
@@ -55,6 +62,8 @@
       .header{
         height:131px;
       }
+      .header>nav.nav{order:4;}
+      .header>ul#tgl_btn{order:3;}
       .section{
         height:800px;
       }
@@ -74,7 +83,12 @@
     @media (min-width:1024px){
       .header{
         height:80px;
+        flex-flow:row nowrap;
       }
+      .header>h1.logo{order:1;}
+      .header>nav.nav{order:2;}
+      .header>ul.quick_nav{order:3;}
+      .header>ul#tgl_btn{order:4;}
       .section{
         height:600px;
       }
