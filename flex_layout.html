@@ -19,8 +19,6 @@
     /* 기본 스타일     */
     /* 모바일 스타일 */
     .wrap{
-      /* width:320px; */
-      /* 320/384*100=83.33333333333333 */
       width:83.33333333333333%;
       min-width:320px;
       max-width:1200px;
@@ -28,13 +26,27 @@
       background:rgba(255,0,0,0.2);
     }
     .header{
-      height:147px;
       background:rgba(0,255,0,0.2);
       display:flex;
       flex-flow:column nowrap;
       justify-content:space-around;
+      position:relative;
     }
-    .header>h1.logo{order:2;}
+    .header>h1.logo{
+      order:2;
+      height:96px;
+      background:#2dcc70;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .header>h1.logo>a{
+      text-align:center;
+      font-weight:bold;
+      font-size:18px;
+      color:#ffffff;
+      line-height:22px;
+    }
     .header>nav.nav{order:3;}
     .header>ul.quick_nav{order:1;}
     .header>ul#tgl_btn{order:4;}
@@ -62,6 +74,13 @@
       .header{
         height:131px;
       }
+      .header>h1.logo{
+        position:absolute;
+        left:0;
+        top:52px;
+        width:120px;
+        height:137px;
+      }
       .header>nav.nav{order:4;}
       .header>ul#tgl_btn{order:3;}
       .section{
@@ -85,7 +104,10 @@
         height:80px;
         flex-flow:row nowrap;
       }
-      .header>h1.logo{order:1;}
+      .header>h1.logo{
+        order:1;        
+        top:0;
+      }
       .header>nav.nav{order:2;}
       .header>ul.quick_nav{order:3;}
       .header>ul#tgl_btn{order:4;}
