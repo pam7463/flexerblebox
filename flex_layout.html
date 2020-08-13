@@ -48,15 +48,19 @@
     }
     .header>nav.nav{
       order:3;
-      display:none;
+      
     }
+    
     .header>nav.nav>ul{
       height:216px;
       padding:0 6.25%;
       background:#2d3e50;
-      display:flex;
+      display:none;
       flex-flow:column nowrap;
       justify-content:space-around;
+    }
+    .header>nav.nav>ul.active{
+      display:flex;
     }
 
     .header>nav.nav>ul>li{
@@ -75,6 +79,10 @@
     .header>nav.nav>ul>li>a{
       font-size:16px;
       color:#ffffff;
+    }
+    .header>nav.nav>ul>li>a:hover{
+      font-weight:bolder;
+      text-decoration:underline;
     }
     .header>ul.quick_nav{
       order:1;
@@ -198,6 +206,7 @@
         height:80px;
         padding:0 0 0 8%;
         background:#2dcc70;
+        display:flex;
         flex-flow:row nowrap;
         justify-content:space-evenly;
         align-items:center;
@@ -246,13 +255,23 @@
         <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
       </ul>
-      <ul id="tgl_btn">
+      <ul id="tgl_btn" onclick="
+      document.querySelector('nav.nav>ul').classList.toggle('active');
+      ">
         <li>라인1</li>
         <li>라인2</li>
         <li>라인3</li>
       </ul>
     </header>
-    <section class="section">section</section>
+    <section class="section">
+      <article class="trop">트로피</article>
+      <article class="trend">트랜드</article>
+      <article class="search">검색어</article>
+      <article class="new">최신글</article>
+      <article class="best">인기글</article>
+      <article class="web_std">웹표준</article>
+      <article class="sns">SNS</article>
+    </section>
     <footer class="footer">footer</footer>
   </div>
 </body>
