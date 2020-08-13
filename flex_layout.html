@@ -125,7 +125,6 @@
       display:flex;
       justify-content: center;
       align-items: center;
-      font-size:32px;
     }
     .section>.trop{
       height:300px;
@@ -151,13 +150,37 @@
       background:#219af7;
       order:5;
     }
-    .section>.new{
+    .section>.new,.section>.best{
       height:260px;
       background:#ffc410;
       order:2;
+      flex-flow:column nowrap;
+      justify-content:space-evenly;
+      align-items:flex-start;
+    }
+    .section>.new>h2,.section>.best>h2{
+      align-self:center;
+      font-weight:bold;
+      font-size:20px;
+      color:#ffffff;
+      text-shadow:1px 1px 1px #aaaaaa;
+    }
+    .section>.new>ul,.section>.best>ul{
+      margin-left:12.5%;
+    }
+    .section>.new>ul,.section>.new>ul>li,
+    .section>.best>ul,.section>.best>ul>li{
+      list-style:circle inside;
+      color:#ffffff;
+    }
+    .section>.new>ul>li,.section>.best>ul>li{
+      padding-bottom:6px;
+    }
+    .section>.new>ul>li>a,.section>.best>ul>li>a{
+      color:#ffffff;
+      font-size:18px;
     }
     .section>.best{
-      height:260px;
       background:#a660c2;
       order:3;
     }
@@ -249,14 +272,19 @@
         height:355px;
         order:2;
       }
-      .section>.new{
+      .section>.new,.section>.best{
         width:41.66666666666667%;
         height:262px;
         order:3;
       }
+      .section>.new>h2,.section>.best>h2{
+        font-size:16px;
+      }
+      .section>.new>ul>li>a,.section>.best>ul>li>a{
+        font-size:12px;
+      }
+      
       .section>.best{
-        width:41.66666666666667%;
-        height:262px;
         order:4;
       }
       .section>.web_std{
@@ -277,8 +305,24 @@
     }
 
 
-
-
+    /* 게시판(최신글,인기글) */
+    @media(min-width:800px){
+      .section>.new>h2,.section>.best>h2{
+        font-size:18px;
+      }
+      .section>.new>ul>li>a,.section>.best>ul>li>a{
+        font-size:14px;
+      }
+    }
+    /* 게시판(최신글,인기글) */
+    @media(min-width:950px){
+      .section>.new>h2,.section>.best>h2{
+        font-size:20px;
+      }
+      .section>.new>ul>li>a,.section>.best>ul>li>a{
+        font-size:18px;
+      }
+    }
 
 
 
@@ -341,12 +385,17 @@
         height:406px;
         order:3;
       }
-      .section>.new{
+      .section>.new,.section>.best{
         width:30%;
         order:4;
       }
+      .section>.new>h2,.section>.best>h2{
+
+      }
+      .section>.new>ul>li>a,.section>.best>ul>li>a{
+
+      }
       .section>.best{
-        width:30%;
         order:5;
       }
       .section>.web_std{
