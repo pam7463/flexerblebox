@@ -142,8 +142,38 @@
     
     .section>.trend{
       height:500px;
+      padding:50px 12.5%;
       background:#e75d5d;
       order:4;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .section>.trend>.trend_item{
+      width:100%;
+    }
+    .section>.trend>.trend_item>.trend_img{
+      height:150px;
+      border-radius:3px;
+      background:#ffc410;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .section>.trend>.trend_item:last-child>.trend_img{
+      background:#aae0f8;
+    }
+    .section>.trend>.trend_item>.trend_img>svg{
+      width:25.83333333333333%;
+    }
+    .section>.trend>.trend_item>.trend_img>svg>path{
+      fill:#ffffff;
+    }
+    .section>.trend>.trend_item>p{
+      font-weight:bold;
+      font-size:20px;
+      color:#ffffff;
+      text-align:center;
+      margin-top:15px;
     }
     .section>.search{
       height:360px;
@@ -266,6 +296,15 @@
         width:71.35416666666667%;
         height:276px;
         order:6;
+        flex-direction:row;
+        padding:50px 5.208333333333333%;
+      }
+      .section>.trend>.trend_item{
+        width:47.00854700854701%;
+        height:100%;
+      }
+      .section>.trend>.trend_item>.trend_img{
+        height:138px;
       }
       .section>.search{
         width:40.10416666666667%;
@@ -379,6 +418,17 @@
         width:27.08333333333333%;
         height:406px;
         order:2;
+        flex-direction:column;
+        padding:38px 5.208333333333333%;
+      }
+      .section>.trend>.trend_item{
+        width:100%;
+      }
+      .section>.trend>.trend_item>.trend_img{
+        height:100px;
+      }
+      .section>.trend>.trend_item>p{
+        font-size:18px;
       }
       .section>.search{
         width:22.91666666666667%;
@@ -452,7 +502,24 @@
           <path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z"></path>
         </svg>
       </article>
-      <article class="trend">트랜드</article>
+      <article class="trend">
+        <div class="trend_item">
+          <div class="trend_img">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" class="svg-inline--fa fa-rocket fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"></path></svg>
+          </div>
+          <p>
+            디자인 트렌드 플렛
+          </p>
+        </div>
+        <div class="trend_item">
+          <div class="trend_img">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cloud" class="svg-inline--fa fa-cloud fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4z"></path></svg>
+          </div>
+          <p>
+            원색이 포인트 플랫
+          </p>
+        </div>
+      </article>
       <article class="search">검색어</article>
       <article class="new">
         <h2>최신 글</h2>
