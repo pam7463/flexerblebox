@@ -117,11 +117,50 @@
       background:#ffffff;
       text-indent:-99999999px;
     }
-    
-
     .section{
-      height:1200px;
-      background:rgba(0,0,255,0.2);
+      display:flex;
+      flex-flow:column nowrap;
+    }
+    .section>article{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-size:32px;
+    }
+    .section>.trop{
+      height:300px;
+      background:#8271fe;
+      order:1;
+    }
+    .section>.trend{
+      height:500px;
+      background:#e75d5d;
+      order:4;
+    }
+    .section>.search{
+      height:360px;
+      background:#219af7;
+      order:5;
+    }
+    .section>.new{
+      height:260px;
+      background:#ffc410;
+      order:2;
+    }
+    .section>.best{
+      height:260px;
+      background:#a660c2;
+      order:3;
+    }
+    .section>.web_std{
+      height:220px;
+      background:#e6567a;
+      order:6;
+    }
+    .section>.sns{
+      height:100px;
+      background:#ffffff;
+      order:7;
     }
     .footer{
       height:67px;
@@ -169,7 +208,41 @@
         top:76px;
         }
       .section{
-        height:800px;
+        flex-flow:row wrap;
+      }
+      .section>.trop{
+        width:59.89583333333333%;
+        height:355px;
+      }
+      .section>.trend{
+        width:71.35416666666667%;
+        height:276px;
+        order:6;
+      }
+      .section>.search{
+        width:40.10416666666667%;
+        height:355px;
+        order:2;
+      }
+      .section>.new{
+        width:41.66666666666667%;
+        height:262px;
+        order:3;
+      }
+      .section>.best{
+        width:41.66666666666667%;
+        height:262px;
+        order:4;
+      }
+      .section>.web_std{
+        width:28.64583333333333%;
+        height:276px;
+        order:7;
+      }
+      .section>.sns{
+        width:16.66666666666667%;
+        height:262px;
+        order:5;
       }
       .footer{
         height:91px;
@@ -224,10 +297,39 @@
       .header>ul#tgl_btn{
         order:4;
         display:none;
+      }      
+      .section>.trop{
+        width:50%;
+        height:406px;
       }
-      .section{
-        height:600px;
+      .section>.trend{
+        width:27.08333333333333%;
+        height:406px;
+        order:2;
       }
+      .section>.search{
+        width:22.91666666666667%;
+        height:406px;
+        order:3;
+      }
+      .section>.new{
+        width:30%;
+        order:4;
+      }
+      .section>.best{
+        width:30%;
+        order:5;
+      }
+      .section>.web_std{
+        width:22.91666666666667%;
+        height:262px;
+        order:6;
+      }
+      .section>.sns{
+        width:17.08333333333333%;
+        order:7;
+      }
+
     }
 
   </style>
