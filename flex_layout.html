@@ -26,10 +26,9 @@
       background:rgba(255,0,0,0.2);
     }
     .header{
-      background:rgba(0,255,0,0.2);
+      background:#2dcc70;
       display:flex;
       flex-flow:column nowrap;
-      justify-content:space-around;
       position:relative;
     }
     .header>h1.logo{
@@ -77,7 +76,19 @@
       font-size:16px;
       color:#ffffff;
     }
-    .header>ul.quick_nav{order:1;}
+    .header>ul.quick_nav{
+      order:1;
+      height:50px;
+      border-bottom:2px solid rgba(255, 255, 255,0.2);
+      display:flex;
+      flex-flow:row nowrap;
+      justify-content:space-around;
+      align-items:center;
+    }
+    .header>ul.quick_nav>li>a>i{
+      font-size:24px;
+      color:#ffffff;
+    }
     .header>ul#tgl_btn{
       order:4;
       width:30px;
@@ -92,11 +103,13 @@
       top:61px;
       cursor:pointer;
     }
+
     .header>ul#tgl_btn>li{
       height:3px;
       background:#ffffff;
       text-indent:-99999999px;
     }
+    
 
     .section{
       height:1200px;
@@ -139,6 +152,9 @@
       .header>nav.nav>ul{
         padding:0 2.604166666666667%;
       }
+      .header>ul.quick_nav{
+        position:relative;
+      }
       .header>ul#tgl_btn{
         order:3;
         right:30px;
@@ -164,6 +180,8 @@
       .header{
         height:80px;
         flex-flow:row nowrap;
+        justify-content:space-between;
+        align-items: center;
       }
       .header>h1.logo{
         order:1;        
@@ -173,6 +191,8 @@
         display:block;
         order:2;
         position:static;
+        /* margin-left:114px; */
+        margin-left:11.875%;
       }
       .header>nav.nav>ul{
         width:470px;
@@ -186,8 +206,19 @@
       .header>nav.nav>ul>li::after{
         content:'';
       }
-      .header>ul.quick_nav{order:3;}
-      .header>ul#tgl_btn{order:4;display:none;}
+      .header>ul.quick_nav{
+        order:3;
+        position:static;
+        /* width:106px; */
+        width:16%;
+        /* margin-right:30px; */
+        margin-right:3.125%;
+        border:none;
+      }
+      .header>ul#tgl_btn{
+        order:4;
+        display:none;
+      }
       .section{
         height:600px;
       }
