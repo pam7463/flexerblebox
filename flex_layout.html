@@ -177,8 +177,30 @@
     }
     .section>.search{
       height:360px;
+      padding:40px;
       background:#219af7;
       order:5;
+      flex-flow:column nowrap;
+      justify-content:space-between;      
+    }
+    .section>.search>ol{
+      list-style:decimal;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+    }
+    .section>.search>ol>li{
+      list-style:decimal inside;
+      width:47.91666666666667%;
+      height:35px;
+      margin-top:15px;
+      border:1px solid #ffffff;
+      text-align:center;
+    }
+    .section>.search>ol>li>a{
+      font-size:16px;
+      color:#ffffff;
+      line-height:35px;
     }
     .section>.new,.section>.best{
       height:260px;
@@ -188,7 +210,8 @@
       justify-content:space-evenly;
       align-items:flex-start;
     }
-    .section>.new>h2,.section>.best>h2{
+    /* 아티클 타이틀 */
+    .section>.new>h2,.section>.best>h2,.section>.search>h2{
       align-self:center;
       font-weight:bold;
       font-size:20px;
@@ -520,7 +543,21 @@
           </p>
         </div>
       </article>
-      <article class="search">검색어</article>
+      <article class="search">
+        <h2>인기 검색어</h2>
+        <ol>
+          <li><a href="#">반응형 웹</a></li>
+          <li><a href="#">미디어 쿼리</a></li>
+          <li><a href="#">뷰포트</a></li>
+          <li><a href="#">CSS 트릭스</a></li>
+          <li><a href="#">W3C</a></li>
+          <li><a href="#">루크 W</a></li>
+          <li><a href="#">CSS 젠 가든</a></li>
+          <li><a href="#">클리어 보스</a></li>
+          <li><a href="#">XE</a></li>
+          <li><a href="#">워드프레스</a></li>
+        </ol>
+      </article>
       <article class="new">
         <h2>최신 글</h2>
         <ul>
